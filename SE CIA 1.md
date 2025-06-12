@@ -502,108 +502,252 @@ This comprehensive metrics framework ensures that non-functional requirements ar
 ## Question 8: (10 Marks)
 **Explain the requirement engineering process to develop a Patient Management System for our hospital, ensuring that we gather, analyze, and document the needs of doctors, nurses, and patients effectively with a neat diagram.**
 
-### Requirements Engineering Process (from PDF):
+### Requirements Engineering Process (From PDF):
+
+**Requirements Engineering** is the process of defining system services and constraints, with outputs being **system requirements** (descriptions of services & constraints).
+
+#### Common RE Activities:
+1. **Requirements Elicitation** – Gathering system needs
+2. **Requirements Analysis** – Refining and structuring  
+3. **Requirements Validation** – Checking correctness
+4. **Requirements Management** – Handling changes over time
+
+**RE is iterative** → Steps are repeated throughout development following a **spiral process** where each phase is refined and improved over time.
+
+### Patient Management System Requirements Engineering Process:
 
 ```
-    REQUIREMENTS ENGINEERING PROCESS FOR PATIENT MANAGEMENT
-    
-    ┌─────────────────────────────────────────────────────────┐
-    │              1. ELICITATION & ANALYSIS                  │
-    │                                                         │
-    │ • Identify stakeholder needs                            │
-    │                                                         │
-    │ STAKEHOLDERS:           ACTIVITIES:                     │
-    │ ┌─────────────────┐    ┌─────────────────┐            │
-    │ │ • Doctors       │    │ • Gather needs  │            │
-    │ │ • Nurses        │    │ • Analyze       │            │
-    │ │ • Patients      │    │   requirements  │            │
-    │ │ • Administrators│    │ • Understand    │            │
-    │ │ • Hospital Staff│    │   constraints   │            │
-    │ └─────────────────┘    └─────────────────┘            │
-    └─────────────────────┬───────────────────────────────────┘
-                          │
-                          ▼
-    ┌─────────────────────────────────────────────────────────┐
-    │                  2. SPECIFICATION                       │
-    │                                                         │
-    │ • Document detailed requirements                        │
-    │                                                         │
-    │ FUNCTIONAL REQS:        NON-FUNCTIONAL REQS:            │
-    │ ┌─────────────────┐    ┌─────────────────┐            │
-    │ │ • Patient       │    │ • Security &    │            │
-    │ │   management    │    │   Privacy       │            │
-    │ │ • Medical       │    │ • Performance   │            │
-    │ │   records       │    │ • Reliability   │            │
-    │ │ • Treatment     │    │ • Maintainability│           │
-    │ │   tracking      │    │ • Acceptability │            │
-    │ └─────────────────┘    └─────────────────┘            │
-    └─────────────────────┬───────────────────────────────────┘
-                          │
-                          ▼
-    ┌─────────────────────────────────────────────────────────┐
-    │                   3. VALIDATION                         │
-    │                                                         │
-    │ • Ensure correctness and feasibility                    │
-    │                                                         │
-    │ VALIDATION METHODS:     QUALITY CHECKS:                 │
-    │ ┌─────────────────┐    ┌─────────────────┐            │
-    │ │ • Requirements  │    │ • Completeness  │            │
-    │ │   review        │    │ • Consistency   │            │
-    │ │ • Stakeholder   │    │ • Feasibility   │            │
-    │ │   feedback      │    │ • Testability   │            │
-    │ │ • System        │    │ • Traceability  │            │
-    │ │   prototyping   │    │ • Correctness   │            │
-    │ └─────────────────┘    └─────────────────┘            │
-    └─────────────────────────────────────────────────────────┘
+Requirements Engineering Process for Patient Management System:
+
+┌─────────────────────────────────────────────────────────────┐
+│                 REQUIREMENTS ELICITATION                    │
+│                                                             │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │                 STAKEHOLDER ANALYSIS                │    │
+│  │                                                     │    │
+│  │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐    │    │
+│  │  │   DOCTORS   │ │   NURSES    │ │  PATIENTS   │    │    │
+│  │  │             │ │             │ │             │    │    │
+│  │  │• Access     │ │• Coordinate │ │• View       │    │    │
+│  │  │  patient    │ │  care       │ │  records    │    │    │
+│  │  │  records    │ │• Update     │ │• Schedule   │    │    │
+│  │  │• Prescribe  │ │  treatments │ │  appointments│   │    │
+│  │  │  medication │ │• Monitor    │ │• Receive    │    │    │
+│  │  │• Diagnose   │ │  vitals     │ │  notifications│  │    │
+│  │  │• Treatment  │ │• Administer │ │• Access     │    │    │
+│  │  │  planning   │ │  medication │ │  test results│   │    │
+│  │  └─────────────┘ └─────────────┘ └─────────────┘    │    │
+│  │                                                     │    │
+│  │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐    │    │
+│  │  │ADMINISTRATORS│ │MEDICAL STAFF│ │ IT SUPPORT  │    │    │
+│  │  │             │ │             │ │             │    │    │
+│  │  │• Generate   │ │• Maintain   │ │• System     │    │    │
+│  │  │  reports    │ │  records    │ │  maintenance│    │    │
+│  │  │• Manage     │ │• Ensure     │ │• Data       │    │    │
+│  │  │  resources  │ │  compliance │ │  backup     │    │    │
+│  │  │• Monitor    │ │• Quality    │ │• Security   │    │    │
+│  │  │  performance│ │  control    │ │  management │    │    │
+│  │  └─────────────┘ └─────────────┘ └─────────────┘    │    │
+│  └─────────────────────────────────────────────────────┘    │
+│                                                             │
+│  Elicitation Techniques:                                    │
+│  • Interviews with stakeholders                             │
+│  • Ethnography (observing current workflows)                │
+│  • User stories and scenarios                               │
+│  • Prototyping for complex features                         │
+└─────────────────────────────┬───────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│              REQUIREMENTS ANALYSIS & SPECIFICATION          │
+│                                                             │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │            FUNCTIONAL REQUIREMENTS                  │    │
+│  │                                                     │    │
+│  │  Patient Management:                                │    │
+│  │  • Patient registration and demographic data        │    │
+│  │  • Medical history maintenance                      │    │
+│  │  • Appointment scheduling system                    │    │
+│  │  • Treatment plan management                        │    │
+│  │                                                     │    │
+│  │  Clinical Operations:                               │    │
+│  │  • Electronic health records (EHR)                 │    │
+│  │  • Prescription management                          │    │
+│  │  • Laboratory test ordering and results            │    │
+│  │  • Diagnostic imaging integration                   │    │
+│  │                                                     │    │
+│  │  Administrative Functions:                          │    │
+│  │  • Billing and insurance processing                │    │
+│  │  • Report generation and analytics                 │    │
+│  │  • Resource management                             │    │
+│  │  • Regulatory compliance tracking                  │    │
+│  └─────────────────────────────────────────────────────┘    │
+│                                                             │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │          NON-FUNCTIONAL REQUIREMENTS                │    │
+│  │                                                     │    │
+│  │  Product Requirements:                              │    │
+│  │  • System available 24/7 with 99.9% uptime        │    │
+│  │  • Response time < 2 seconds for patient queries   │    │
+│  │  • Support 500 concurrent users                    │    │
+│  │  • Data backup every 4 hours                       │    │
+│  │                                                     │    │
+│  │  Organizational Requirements:                       │    │
+│  │  • HIPAA compliance for patient privacy            │    │
+│  │  • FDA regulations for medical devices             │    │
+│  │  • Hospital-approved security standards            │    │
+│  │                                                     │    │
+│  │  External Requirements:                             │    │
+│  │  • Integration with existing hospital systems      │    │
+│  │  • Interoperability with external labs             │    │
+│  │  • Accessibility standards compliance              │    │
+│  └─────────────────────────────────────────────────────┘    │
+└─────────────────────────────┬───────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│               REQUIREMENTS VALIDATION                        │
+│                                                             │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │               VALIDATION TECHNIQUES                  │    │
+│  │                                                     │    │
+│  │  Requirements Reviews:                              │    │
+│  │  • Systematic manual analysis with stakeholders     │    │
+│  │  • Include doctors, nurses, and patients           │    │
+│  │  • Formal review meetings and documentation        │    │
+│  │                                                     │    │
+│  │  Prototyping:                                       │    │
+│  │  • Build executable model for validation           │    │
+│  │  • Test critical workflows with medical staff      │    │
+│  │  • Validate user interface with end users          │    │
+│  │                                                     │    │
+│  │  Test-case Generation:                              │    │
+│  │  • Develop tests to check testability              │    │
+│  │  • Create scenarios for patient care workflows     │    │
+│  │  • Validate system integration points              │    │
+│  └─────────────────────────────────────────────────────┘    │
+│                                                             │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │              VALIDATION CHECKS                      │    │
+│  │                                                     │    │
+│  │  • Validity: Does system meet healthcare needs?    │    │
+│  │  • Consistency: No conflicting requirements?       │    │
+│  │  • Completeness: All medical functions included?   │    │
+│  │  • Realism: Can be implemented with resources?     │    │
+│  │  • Verifiability: Can requirements be tested?     │    │
+│  └─────────────────────────────────────────────────────┘    │
+└─────────────────────────────┬───────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│               REQUIREMENTS MANAGEMENT                        │
+│                                                             │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │           REQUIREMENTS MANAGEMENT PLANNING           │    │
+│  │                                                     │    │
+│  │  Identification:                                    │    │
+│  │  • Unique IDs for cross-referencing                │    │
+│  │  • REQ-PM-001: Patient Registration                │    │
+│  │  • REQ-PM-002: Medical History Access              │    │
+│  │  • REQ-PM-003: Prescription Management             │    │
+│  │                                                     │    │
+│  │  Change Management Process:                         │    │
+│  │  • Assess impact and cost of changes               │    │
+│  │  • Medical staff approval for clinical changes     │    │
+│  │  • Regulatory compliance review                    │    │
+│  │                                                     │    │
+│  │  Traceability Policies:                            │    │
+│  │  • Link requirements to design decisions           │    │
+│  │  • Map user needs to system functions              │    │
+│  │  • Connect test cases to requirements              │    │
+│  │                                                     │    │
+│  │  Tool Support:                                     │    │
+│  │  • Requirements management database                │    │
+│  │  • Version control for requirement changes         │    │
+│  │  • Impact analysis tools                           │    │
+│  └─────────────────────────────────────────────────────┘    │
+│                                                             │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │         REQUIREMENTS CHANGE MANAGEMENT               │    │
+│  │                                                     │    │
+│  │  Step 1: Problem Analysis & Change Specification    │    │
+│  │  • Analyze change proposal from medical staff       │    │
+│  │  • Assess impact on patient safety                 │    │
+│  │  • Provide feedback to requester                   │    │
+│  │                                                     │    │
+│  │  Step 2: Change Analysis & Costing                 │    │
+│  │  • Use traceability data for impact assessment     │    │
+│  │  • Consider regulatory compliance requirements     │    │
+│  │  • Decide whether to proceed with change           │    │
+│  │                                                     │    │
+│  │  Step 3: Change Implementation                      │    │
+│  │  • Modify requirements document                     │    │
+│  │  • Update system design accordingly                │    │
+│  │  • Notify all affected stakeholders                │    │
+│  └─────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-**Using Mentcare Case Study as Example:**
+### Requirements Engineering Stages for Patient Management System:
 
-### 1. Elicitation & Analysis Phase:
+#### Stage 1: Requirements Discovery
+**Involves gathering information from stakeholders:**
+- **Managers**: Hospital administrators, department heads
+- **Users**: Doctors, nurses, patients  
+- **Engineers**: IT staff, system integrators
+- **External regulators**: Healthcare compliance officers
 
-**Stakeholder Requirements:**
-- **Doctors**: Need to update and view patient records, treatment planning
-- **Nurses**: Patient monitoring, care coordination  
-- **Patients**: Access to their medical information
-- **Administrators**: Performance tracking, reporting capabilities
-- **Hospital Management**: System oversight and analytics
+**Techniques Used:**
+- **Interviews**: Structured discussions with medical staff
+- **Ethnography**: Observing current patient care workflows  
+- **Prototyping**: Early system demonstrations for feedback
 
-**System Goals (from Mentcare):**
-- Help health managers track performance
-- Provide timely patient information for doctors
+#### Stage 2: Requirements Classification & Organization
+**Grouping requirements into categories:**
+- **Patient Care Requirements**: Registration, treatment, monitoring
+- **Clinical Requirements**: Prescriptions, lab results, diagnostics
+- **Administrative Requirements**: Billing, reporting, compliance
+- **Technical Requirements**: Integration, security, performance
 
-### 2. Specification Phase:
+#### Stage 3: Requirements Prioritization & Negotiation
+**Resolving conflicts and ranking by importance:**
+- **Critical**: Patient safety and data security
+- **Important**: Workflow efficiency and reporting
+- **Desirable**: Advanced analytics and mobile access
 
-**Functional Requirements:**
-- **Care Management**: Doctors can update and view patient records
-- **Patient Monitoring**: Warns doctors about high-risk patients  
-- **Reporting**: Tracks patient numbers, treatments, and costs
-- **Data Storage**: Stores patient history and treatment details
-- **Multi-location Support**: Used in clinics, hospitals, community centers
+#### Stage 4: Requirements Specification
+**Formal documentation using:**
+- **Natural Language**: Clear, numbered sentences
+- **Structured Templates**: Consistent format for all requirements
+- **UML Diagrams**: Use cases for patient interactions
+- **Tabular Specifications**: Decision tables for complex logic
 
-**Non-Functional Requirements:**
-- **Privacy**: Only authorized staff should access patient records
-- **Safety**: Must alert staff about suicidal or dangerous patients
-- **Availability**: Works offline but syncs with central database when online
-- **Reliability**: System must function consistently
-- **Security**: Protect sensitive patient information
+### Example Patient Management System Requirements:
 
-### 3. Validation Phase:
+#### Functional Requirements:
+1. **REQ-PM-001**: The system shall allow doctors to access patient medical history within 2 seconds
+2. **REQ-PM-002**: Nurses shall be able to update patient vital signs in real-time
+3. **REQ-PM-003**: Patients shall receive automated appointment reminders 24 hours in advance
 
-**Validation Activities:**
-- Review requirements with medical staff
-- Ensure system meets healthcare regulations
-- Verify privacy and safety requirements
-- Test system prototypes with users
-- Confirm integration capabilities
+#### Non-Functional Requirements:
+1. **Performance**: System must support 500 concurrent users with <2 second response time
+2. **Security**: All patient data must be encrypted and HIPAA compliant
+3. **Availability**: System must maintain 99.9% uptime during hospital operating hours
 
-**Key Success Factors:**
-- Continuous stakeholder involvement
-- Focus on patient safety and privacy
-- System reliability and availability
-- Integration with existing hospital systems
-- Compliance with medical standards
+### Challenges in Healthcare Requirements Engineering:
 
----
+**From PDF - Challenges in Requirements Elicitation:**
+- **Stakeholders may not know what they want**: Medical staff may not understand technical possibilities
+- **Domain-specific language**: Medical terminology can be complex for developers
+- **Conflicting requirements**: Different departments may have competing needs
+- **Regulatory changes**: Healthcare regulations evolve, requiring system updates
 
-**Total: 80 Marks (8 questions × 10 marks each)**
+### Success Factors:
+
+1. **Early Stakeholder Involvement**: Include all user groups from the beginning
+2. **Iterative Process**: Regular feedback and refinement cycles
+3. **Regulatory Compliance**: Ensure all requirements meet healthcare standards
+4. **Change Management**: Formal process for handling evolving needs
+5. **Validation**: Continuous testing with real healthcare workflows
+
+This systematic approach ensures the Patient Management System meets the complex needs of healthcare environments while maintaining safety, security, and regulatory compliance.
