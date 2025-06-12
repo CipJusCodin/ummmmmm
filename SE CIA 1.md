@@ -325,176 +325,177 @@ Like the **iLearn Digital Learning Environment** case study, a CRM should be:
 ## Question 6: (10 Marks)
 **Mention the different metrics available for specifying non functional requirements with an example for each.**
 
-### Non-Functional Requirements (from PDF):
+### Metrics for Non-Functional Requirements (From PDF):
 
-**Key Attributes of Good Software:**
+The PDF provides a comprehensive table of **metrics for non-functional requirements**:
+
+#### 1. Speed Metrics
+
+**Measures:**
+- **Transactions per second**
+- **Response time**
+
+**Examples:**
+- **E-commerce System**: Must process 1000 transactions per second during peak hours
+- **Web Application**: Page response time must be less than 3 seconds
+- **Banking System**: Transaction processing should complete within 2 seconds
+
+#### 2. Size Metrics
+
+**Measures:**
+- **MB (Megabytes)**
+- **Number of ROM chips**
+
+**Examples:**
+- **Mobile Application**: App size should not exceed 50 MB for download
+- **Embedded System**: System should fit within 2 ROM chips
+- **Database**: Storage requirement should not exceed 100 GB
+
+#### 3. Ease of Use Metrics
+
+**Measures:**
+- **Training time**
+- **Help frames count**
+
+**Examples from PDF:**
+- **Mentcare System**: "Medical staff must learn all functions in 4 hours"
+- **Learning System**: "After training, errors should not exceed 2 per hour"
+- **User Interface**: Maximum 5 help screens should be sufficient for basic operations
+
+#### 4. Reliability Metrics
+
+**Measures:**
+- **Mean time to failure**
+- **Failure rate**
+
+**Examples:**
+- **Hospital System**: Mean time to failure should be minimum 8760 hours (1 year)
+- **Banking Application**: Failure rate should not exceed 0.1% of all transactions
+- **Air Traffic Control**: System should have failure rate less than 0.001%
+
+#### 5. Availability Metrics
+
+**Measures:**
+- **Probability of uptime**
+
+**Examples from PDF:**
+- **Mentcare System**: "The system must be available during clinic hours (Mon–Fri, 08:30–17:30). Downtime should not exceed 5 seconds per day during working hours"
+- **E-commerce Platform**: 99.9% availability required
+- **Educational System**: 98% availability during academic hours
+
+#### 6. Robustness Metrics
+
+**Measures:**
+- **Restart time**
+- **Data corruption probability**
+
+**Examples:**
+- **Database System**: System restart after failure should be within 60 seconds
+- **File Storage**: Data corruption probability should be less than 0.001%
+- **Web Server**: Recovery time after crash should not exceed 30 seconds
+
+#### 7. Portability Metrics
+
+**Measures:**
+- **% of target-dependent code**
+- **Number of target systems**
+
+**Examples:**
+- **Cross-platform Software**: Target-dependent code should be less than 15%
+- **Mobile Application**: Should support minimum 3 operating systems (iOS, Android, Windows)
+- **Web Application**: Should work on at least 5 different browsers
+
+### Comprehensive Metrics Table (From PDF):
 
 ```
-                NON-FUNCTIONAL REQUIREMENTS METRICS
-    
-    ┌─────────────────────────────────────────────────────────┐
-    │                  MAINTAINABILITY                        │
-    │                                                         │
-    │ • Easy to update and modify                             │
-    │ • System can accommodate changes                        │
-    │ • Software evolution capability                         │
-    │ • Modifiable to meet new requirements                   │
-    └─────────────────────────────────────────────────────────┘
-    
-    ┌─────────────────────────────────────────────────────────┐
-    │                DEPENDABILITY & SECURITY                 │
-    │                                                         │
-    │ • Should not fail during operation                      │
-    │ • Must not allow cyberattacks                           │
-    │ • Reliable system performance                           │
-    │ • Secure data protection                                │
-    └─────────────────────────────────────────────────────────┘
-    
-    ┌─────────────────────────────────────────────────────────┐
-    │                     EFFICIENCY                          │
-    │                                                         │
-    │ • Uses resources wisely                                 │
-    │ • Memory usage optimization                             │
-    │ • Processing power efficiency                           │
-    │ • Optimal system performance                            │
-    └─────────────────────────────────────────────────────────┘
-    
-    ┌─────────────────────────────────────────────────────────┐
-    │                   ACCEPTABILITY                         │
-    │                                                         │
-    │ • Easy to use for intended users                        │
-    │ • Integrates well with other systems                    │
-    │ • User-friendly interface                               │
-    │ • System adoption by users                              │
-    └─────────────────────────────────────────────────────────┘
+Non-Functional Requirements Metrics:
+
+┌─────────────────────────────────────────────────────────────┐
+│                    METRICS CLASSIFICATION                   │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────┬─────────────────────┬─────────────────────┐
+│    PROPERTY     │       MEASURE       │      EXAMPLE        │
+├─────────────────┼─────────────────────┼─────────────────────┤
+│                 │ • Transactions/sec  │ • Banking: 1000     │
+│     SPEED       │ • Response time     │   transactions/sec  │
+│                 │                     │ • Web: <3 sec       │
+│                 │                     │   response          │
+├─────────────────┼─────────────────────┼─────────────────────┤
+│                 │ • MB                │ • Mobile app:       │
+│     SIZE        │ • Number of ROM     │   <50 MB           │
+│                 │   chips             │ • Embedded: 2       │
+│                 │                     │   ROM chips         │
+├─────────────────┼─────────────────────┼─────────────────────┤
+│                 │ • Training time     │ • Medical staff:    │
+│  EASE OF USE    │ • Help frames       │   4 hours training  │
+│                 │   count             │ • Max 2 errors/hr   │
+│                 │                     │   after training    │
+├─────────────────┼─────────────────────┼─────────────────────┤
+│                 │ • Mean time to      │ • Hospital system:  │
+│   RELIABILITY   │   failure           │   MTTF 8760 hours   │
+│                 │ • Failure rate      │ • <0.1% failure     │
+│                 │                     │   rate              │
+├─────────────────┼─────────────────────┼─────────────────────┤
+│                 │ • Probability of    │ • Mentcare: 99.9%   │
+│  AVAILABILITY   │   uptime            │   during clinic     │
+│                 │                     │   hours             │
+│                 │                     │ • <5 sec downtime   │
+├─────────────────┼─────────────────────┼─────────────────────┤
+│                 │ • Restart time      │ • Database: <60     │
+│   ROBUSTNESS    │ • Data corruption   │   sec restart       │ 
+│                 │   probability       │ • <0.001% data      │
+│                 │                     │   corruption        │
+├─────────────────┼─────────────────────┼─────────────────────┤
+│                 │ • % target-         │ • <15% target-      │
+│  PORTABILITY    │   dependent code    │   dependent code    │
+│                 │ • Number of target  │ • Support 3+        │
+│                 │   systems           │   platforms         │
+└─────────────────┴─────────────────────┴─────────────────────┘
 ```
 
-**General Issues Affecting Software (from PDF):**
+### Real Examples from PDF Case Studies:
 
-**Scale Metrics:**
-- Software ranges from small wearable devices to massive cloud-based systems
-- Must handle different scales of operation
+#### Mentcare System Examples:
 
-**Heterogeneity Metrics:**
-- Software must work across different devices and networks
-- Cross-platform compatibility requirements
+**1. Product Requirement (Availability):**
+- "The system must be available during clinic hours (Mon–Fri, 08:30–17:30)"
+- "Downtime should not exceed 5 seconds per day during working hours"
 
-**Business & Social Change Metrics:**
-- Rapidly changing industries require adaptable software
-- System must accommodate evolving requirements
+**2. Organizational Requirement (Security):**
+- "Users must authenticate using a health authority identity card"
 
-**Security & Trust Metrics:**
-- As software becomes essential in daily life, it must be reliable and secure
-- Trust and dependability measurements
+**3. External Requirement (Compliance):**
+- "The system must comply with patient privacy laws (HStan-03-2006-priv)"
 
-**Examples from Case Studies:**
+#### Usability Requirements Example:
 
-**Insulin Pump System:**
-- **Dependability**: Must deliver insulin when needed
-- **Reliability**: Must function reliably and give accurate doses
-- **Safety-Critical**: Incorrect insulin levels can cause severe health issues
+**Goal vs. Verifiable Requirement:**
+- **Goal**: "The system should be easy to use and minimize errors"
+- **Testable Requirement**: 
+  - "Medical staff must learn all functions in 4 hours"
+  - "After training, errors should not exceed 2 per hour"
 
-**Mentcare System:**
-- **Privacy**: Only authorized staff should access patient records
-- **Safety**: Must alert staff about suicidal or dangerous patients
-- **Availability**: Works offline but syncs when online
+### Goals vs. Requirements (From PDF):
 
-**Weather Station:**
-- **Reliability**: Monitors power, instruments, and communication systems
-- **Maintainability**: Self-manages power and supports remote updates
-- **Performance**: Collects and transmits weather data continuously
+**Problem**: Non-functional requirements can be hard to state precisely and difficult to verify
+
+**Solution**: Convert goals into verifiable requirements
+- **Goal**: General intention (e.g., "The system should be easy to use")
+- **Verifiable Requirement**: Measurable and testable (e.g., "Users must make no more than 2 errors per hour after 4 hours of training")
+
+This comprehensive metrics framework ensures that non-functional requirements are:
+1. **Measurable**: Can be quantified
+2. **Testable**: Can be verified during testing
+3. **Achievable**: Realistic given available resources
+4. **Relevant**: Important for system success
 
 ---
 
 ## Question 7: (10 Marks)
 **Describe the structure of requirement document.**
 
-### Requirements Engineering Process (from PDF):
-
-```
-                    REQUIREMENTS DOCUMENT STRUCTURE
-    
-    ┌─────────────────────────────────────────────────────────┐
-    │              SOFTWARE SPECIFICATION                     │
-    │                                                         │
-    │ • Customers and engineers define what the software      │
-    │   should do and any limitations                         │
-    │ • Define what services are needed                       │
-    │ • Constraints on development & operation                │
-    └─────────────────────────────────────────────────────────┘
-    ┌─────────────────────────────────────────────────────────┐
-    │            REQUIREMENTS ENGINEERING                     │
-    │                                                         │
-    │ Steps:                                                  │
-    │ 1. Elicitation & Analysis - Identify stakeholder needs │
-    │ 2. Specification - Document detailed requirements      │
-    │ 3. Validation - Ensure correctness and feasibility     │
-    └─────────────────────────────────────────────────────────┘
-    ┌─────────────────────────────────────────────────────────┐
-    │               FUNCTIONAL REQUIREMENTS                   │
-    │                                                         │
-    │ • What the system should do                             │
-    │ • System services and functions                         │
-    │ • Input/output specifications                           │
-    │ • System behavior definitions                           │
-    └─────────────────────────────────────────────────────────┘
-    ┌─────────────────────────────────────────────────────────┐
-    │             NON-FUNCTIONAL REQUIREMENTS                 │
-    │                                                         │
-    │ • Constraints on development & operation                │
-    │ • Performance requirements                              │
-    │ • Security requirements                                 │
-    │ • Quality attributes (maintainability, efficiency)     │
-    └─────────────────────────────────────────────────────────┘
-    ┌─────────────────────────────────────────────────────────┐
-    │                VALIDATION CRITERIA                      │
-    │                                                         │
-    │ • Ensure requirements are correct                       │
-    │ • Check feasibility of requirements                     │
-    │ • Verify completeness of specification                  │
-    │ • Requirements can be tested and verified               │
-    └─────────────────────────────────────────────────────────┘
-```
-
-**Software Process Activities (from PDF):**
-
-**Requirements Document Contains:**
-
-**1. Software Specification**
-- Defining what the software should do
-- Services that are needed
-- Constraints on development and operation
-
-**2. Requirements Categories**
-- **Functional Requirements**: What the system should do
-- **Non-Functional Requirements**: Constraints and quality attributes
-
-**3. Stakeholder Information**
-- Customer requirements and needs
-- Engineer specifications and constraints
-- User expectations and limitations
-
-**4. System Constraints**
-- Development constraints
-- Operational constraints
-- Technical limitations
-
-**5. Validation Criteria**
-- How to verify requirements are met
-- Testing and validation procedures
-- Acceptance criteria
-
-**Key Software Engineering Activities (from PDF):**
-- **Specification**: Defining what the system should do
-- **Development**: Creating the software
-- **Validation**: Ensuring it works correctly
-- **Evolution**: Modifying it over time
-
-**Requirements must be:**
-- Well-defined and managed
-- Testable and verifiable
-- Complete and consistent
-- Traceable to design and implementation
+<img width="467" alt="image" src="https://github.com/user-attachments/assets/71c77dc9-0c66-4e99-8dfc-b0256b4e919f" />
 
 ---
 
